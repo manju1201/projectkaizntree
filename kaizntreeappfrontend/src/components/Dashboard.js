@@ -170,14 +170,6 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                {/* <Modal class ="modal-category" isOpen={isNewCategoryModalOpen} onRequestClose={() => setIsNewCategoryModalOpen(false)}>
-                    <form onSubmit={handleNewCategorySubmit}>
-                        <h2>Add New Category</h2>
-
-                        <input name="category" value={newCategory} onChange={handleNewCategoryChange} placeholder="New Category" required />
-                        <button type="submit">Submit</button>
-                    </form>
-                </Modal> */}
                 <Modal className="modal-category" isOpen={isNewCategoryModalOpen} onRequestClose={() => setIsNewCategoryModalOpen(false)}>
                     <form onSubmit={handleNewCategorySubmit} className="modal-form">
                         <p>Add New Category</p>
