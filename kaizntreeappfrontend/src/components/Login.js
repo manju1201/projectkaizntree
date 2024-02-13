@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login/', { username, password });
+      const response = await axios.post('https://manjju12.pythonanywhere.com/api/login/', { username, password });
       // Save the received token to local storage or context
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard'); // Navigate to the dashboard or home page

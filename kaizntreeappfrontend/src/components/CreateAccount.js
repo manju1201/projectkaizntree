@@ -13,7 +13,7 @@ const CreateAccount = () => {
     event.preventDefault();
     try {
       // Replace with the actual endpoint you have for account creation
-      const response = await axios.post('http://localhost:8000/api/create-account/', { username, email, password });
+      const response = await axios.post('https://manjju12.pythonanywhere.com/api/create-account/', { username, email, password });
       console.log(response.data);
       // Handle account creation success
       // Redirect to login page or dashboard as needed

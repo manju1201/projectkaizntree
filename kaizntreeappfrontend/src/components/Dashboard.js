@@ -49,14 +49,14 @@ const Dashboard = () => {
 
         const fetchItems = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/items/?${params.toString()}`, {
+                const response = await axios.get(`https://manjju12.pythonanywhere.com/api/items/?${params.toString()}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
                 });
                 console.log(response.data);
                 setItems(response.data);
-                const responseCategories = await axios.get(`http://localhost:8000/api/categories/`, {
+                const responseCategories = await axios.get(`https://manjju12.pythonanywhere.com/api/categories/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
@@ -64,7 +64,7 @@ const Dashboard = () => {
                 // console.log(responseCategories.data);
                 setCategories(responseCategories.data);
 
-                const responseTags = await axios.get(`http://localhost:8000/api/tags/`, {
+                const responseTags = await axios.get(`https://manjju12.pythonanywhere.com/api/tags/`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
@@ -104,6 +104,7 @@ const Dashboard = () => {
         } else {
             setNewItem(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
         }
+        console.log(name, value, newItem);
     };
 
     const handleNewCategoryChange = (e) => {
@@ -115,7 +116,7 @@ const Dashboard = () => {
         try {
             const headers = { Authorization: `Bearer ${localStorage.getItem('token')}` };
             // console.log(newCategory);
-            const response = await axios.post('http://localhost:8000/api/categories/', { name: newCategory }, { headers });
+            const response = await axios.post('https://manjju12.pythonanywhere.com/api/categories/', { name: newCategory }, { headers });
             setCategories([...categories, response.data]);
             setIsNewCategoryModalOpen(false);
         } catch (error) {
@@ -136,7 +137,7 @@ const Dashboard = () => {
         try {
             const headers = { Authorization: `Bearer ${localStorage.getItem('token')}` };
             console.log(submitData);
-            const response = await axios.post('http://localhost:8000/api/items/', submitData, { headers });
+            const response = await axios.post('https://manjju12.pythonanywhere.com/api/items/', submitData, { headers });
             setItems([...items, response.data]);
             setIsNewItemModalOpen(false);
         } catch (error) {
