@@ -59,26 +59,17 @@ cd projectkaizntree
 ### Set up the backend
 Navigate to the backend directory and install the required Python dependencies:
 ```
-# It's recommended to use a virtual environment
-python -m venv venv
-# Activate virtual environment. On Windows, use `venv\Scripts\activate` instead
-source venv/bin/activate
-# Install dependencies
 pip install -r requirements.txt
-# Apply migrations
+python manage.py makemigrations
 python manage.py migrate
-# Run the Django development server
 python manage.py runserver
 ```
 
 ### Set up the frontend
 Open a new terminal window, navigate to the frontend directory, and install the required Node.js dependencies:
 ```
-# Assuming the frontend code is in the 'frontend' directory
-cd frontend
-# Install dependencies
+cd kaizntreeappfrontend
 npm install
-# Start the React development server
 npm start
 ```
 The React application will start and typically open in a new browser tab at http://localhost:3000.
