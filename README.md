@@ -86,6 +86,11 @@ For deploying this application to a live system, refer to [Django's deployment c
 - [React](https://reactjs.org/)
 - [SQLite](https://www.sqlite.org/index.html) 
 
+
+###API documentation using Postman: 
+- [API Documentation](https://documenter.getpostman.com/view/32932451/2sA2r3bS4q)
+
+  
 ## Contributing
 
 Your contributions are welcome and greatly appreciated! Contributing to this project is not only a chance to make it better but also a great opportunity to learn and share knowledge with others. Here are some ways you can contribute:
