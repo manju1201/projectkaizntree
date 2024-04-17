@@ -1,5 +1,5 @@
 # Inventory Management System - Kaizntree Application
-
+You can access the live version of the application here: https://kaizntreeapp.netlify.app 
 This Inventory Management System is designed to streamline the process of managing stock, tracking orders, and handling sales and deliveries. Built with Django and Django REST Framework for the backend, React for the frontend, and SQLite as the database, it provides an all-encompassing solution for inventory management.
 
 ## Why This Tech Stack?
